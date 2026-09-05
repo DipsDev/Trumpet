@@ -1,0 +1,108 @@
+#tab4u-transposer-widget {
+  all: initial;
+  position: fixed;
+  top: 100px;
+  right: 16px;
+  z-index: 2147483647;
+  font-family: Arial, Helvetica, sans-serif;
+  direction: rtl;
+  background: #1e293b;
+  color: #f8fafc;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  width: 190px;
+  overflow: hidden;
+  user-select: none;
+}
+
+#tab4u-transposer-widget * {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#tab4u-transposer-widget .t4u-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0f172a;
+  padding: 8px 10px;
+  cursor: move;
+}
+
+#tab4u-transposer-widget .t4u-title {
+  font-size: 13px;
+  font-weight: bold;
+  color: #f8fafc;
+}
+
+#tab4u-transposer-widget .t4u-collapse {
+  background: transparent;
+  border: 1px solid #475569;
+  color: #f8fafc;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  line-height: 1;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#tab4u-transposer-widget .t4u-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 10px;
+}
+
+#tab4u-transposer-widget.t4u-collapsed .t4u-body,
+#tab4u-transposer-widget.t4u-collapsed .t4u-footer {
+  display: none;
+}
+
+#tab4u-transposer-widget .t4u-btn {
+  flex: 0 0 auto;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#tab4u-transposer-widget .t4u-btn:hover {
+  background: #1d4ed8;
+}
+
+#tab4u-transposer-widget .t4u-btn:active {
+  transform: scale(0.96);
+}
+
+#tab4u-transposer-widget .t4u-value {
+  flex: 1;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: #facc15;
+}
+
+#tab4u-transposer-widget .t4u-footer {
+  padding: 0 10px 10px;
+}
+
+#tab4u-transposer-widget .t4u-reset {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #475569;
+  color: #cbd5e1;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#tab4u-transposer-widget .t4u-reset:hover {
+  background: #334155;
+  color: #fff;
+}

@@ -1,10 +1,31 @@
 {
-  "name": "Trumpet",
-  "description": "Transpose your songs with ease",
-  "version": "1.0",
   "manifest_version": 3,
+  "name": "Tab4U Chord Transposer",
+  "version": "1.0.0",
+  "description": "Transpose chords up or down on tab4u.com and see the new chords live on the page.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "*://*.tab4u.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.tab4u.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
   "action": {
-    "default_popup": "index.html",
-    "default_icon": "logo.png"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   }
 }
